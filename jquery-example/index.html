@@ -3,11 +3,12 @@
 <head>
     <title></title>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="inlineEdit.js"></script>
 	<script>
 
 (function($){
  	$.fn.extend({
-    
+
  		animateMenu: function(options) {
 
 			var defaults = {
@@ -44,6 +45,7 @@
 	<script type="text/javascript">
 	$(document).ready(function() {
 		$('#menu').animateMenu({animatePadding: 30, defaultPadding:10});
+    $('p').inlineEdit();
 	});
 	</script>
 	<style>
@@ -54,13 +56,22 @@
 	</style>
 </head>
 <body>
+  <h2> Example 1 </h2>
+  <form>
+      <input type="hidden" name="hiddenField" />
+  </form>
 
+  <p>Please edit me...</p>
+<hr>
+
+<h2> Example 2 </h2>
 <ul id="menu">
 	<li>Home</li>
 	<li>Posts</li>
 	<li>About</li>
 	<li>Contact</li>
 </ul>
+
 
 </body>
 </html>
