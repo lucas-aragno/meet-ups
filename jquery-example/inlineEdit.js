@@ -1,6 +1,6 @@
 $.fn.inlineEdit = function() {
 
-    var replaceWith = $('<input name="temp" type="text" />')
+    var replaceWith = $('<input name="temp" type="text" value="Please edit me..."/>')
     var connectWith = $('input[name="hiddenField"]')
 
     $(this).hover(function() {
